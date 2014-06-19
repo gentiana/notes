@@ -23,6 +23,7 @@ foobar.js.erb.coffee
 $lightGray: #999
 http://bootstrapdocs.com/v2.0.4/docs/less.html
 <%#= link_to "Contact", '#' %>
+'
 visit contact_path
 get 'contact', to: "static_pages#contact"
 about_url
