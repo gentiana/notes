@@ -1,0 +1,58 @@
+rvm use 2.0.0@hartl --create
+gem install rails --version 4.0.5
+rails new first_app
+> .rvmrc &&progen
+Gemfile
+ruby '2.0.0'
+#ruby-gemset=railstutorial_rails_4_0
+$ bundle update
+$ bundle install
+$ git config --global user.name "Your Name"
+$ git config --global user.email your.email@example.com
+git init
+# Ignore Aptana file
+.project (+ secret token!)
+git ci -m 'Initialize repository'
+$ git remote add origin https://github.com/<username>/first_app.git
+$ git push -u origin master
+git checkout -b modify-README
+git mv README.rdoc README.md
+git commit -a -m "Improve the README file"
+$ git checkout master
+$ git merge modify-README
+$ git branch -d modify-README   # -D dla niezmerge'owanej
+git push
+group :production do
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor', '0.0.2'
+end
+ruby '2.0.0'
+bundle install --without production
+git commit -a -m "Update Gemfile.lock for Heroku"
+$ heroku login
+heroku create
+git push heroku master
+
+
+
+
+heroku
+heroku login
+rails new myapp --database=postgresql
+  albo gem 'pg' (zamiast sqlite3) i database.yml
+gem 'rails_12factor', group: :production
+ruby "2.1.2"
+$ git init
+$ git add .
+$ git commit -m "init"
+heroku create
+git push heroku master
+heroku run rake db:migrate
+heroku logs --tail
+heroku run rails console
+heroku config:set SECRET_TOKEN='7658699e0f765e8whatever' (rake secret)
+MyApp::Application.config.secret_key_base = if Rails.env.development? or Rails.env.test?
+  ('x' * 30) # meets minimum requirement of 30 chars long
+else
+  ENV['SECRET_TOKEN']
+end

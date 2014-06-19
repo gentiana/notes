@@ -1,0 +1,5 @@
+blocks are closures, which are one-shot anonymous functions with data attached.
+>> %w[a b c].map &:upcase
+ => ["A", "B", "C"] 
+In Rails, the principal importance of instance variables is that they are automatically available in the views
+require './example_user'
