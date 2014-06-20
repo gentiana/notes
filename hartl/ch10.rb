@@ -2,7 +2,9 @@ rails g model Micropost content user_id:integer
 rm -f spec/factories/microposts.rb
 # retrieve all the microposts associated with a given user id in reverse order of creation
 add_index :microposts, [:user_id, :created_at]
-# By including both the user_id and created_at columns as an array, we arrange for Rails to create a multiple key index, which means that Active Record uses both keys at the same time. 
+# By including both the user_id and created_at columns as an array
+# we arrange for Rails to create a multiple key index,
+# which means that Active Record uses both keys at the same time. 
 rake db:migrate && rake test:prepare
 
 user.microposts.create(arg)  # create!
