@@ -65,7 +65,7 @@ http://getbootstrap.com/2.3.2/components.html
     %ul.dropdown-menu
       %li.divider
       %li= link_to 'Sign out', signout_path, method: 'delete'
-'
+
 //= require bootstrap
 
 sign_in @user       # users#create
