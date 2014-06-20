@@ -4,7 +4,7 @@ git checkout -b filling-in-layout
 <![endif]-->
 /[if lt IE 9]
   %script{src: "http://html5shim.googlecode.com/svn/trunk/html5.js", type: "text/javascript"}
-<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
+= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'sprockets', '2.11.0'
 config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)    # config/application.rb
